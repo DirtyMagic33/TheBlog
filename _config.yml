@@ -1,1 +1,8 @@
+# basic options
+title: Your awesome title
+author: Hue Jassole
+description: my blog
+
+# Build Settings
+markdown: kramdown
 theme: jekyll-theme-minimal
