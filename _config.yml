@@ -6,3 +6,4 @@ description: my blog
 # Build Settings
 markdown: kramdown
 theme: jekyll-theme-minimal
+background color: red
