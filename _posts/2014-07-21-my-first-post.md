@@ -18,9 +18,9 @@ I will be creating two functions, one used to create and connect a session (Conn
 
 The connect script starts out by setting PowerShell’s execution policy to RemoteSigned. If it is set to anything other than RemoteSigned or Unrestricted you will encounter errors.
 
-```powershell
+{% highlight powershell%}
 Set-ExecutionPolicy RemoteSigned
-```
+{% endhighlight %}
 
 
 The next step in the script is to create a variable to store your Office 365 credentials. When the function is run a dialog box will appear and you will need to enter your Office 365 username and password.
