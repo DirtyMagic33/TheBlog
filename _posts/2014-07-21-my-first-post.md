@@ -20,6 +20,7 @@ The connect script starts out by setting PowerShell’s execution policy to Remo
 
 {% highlight powershell%}
 Set-ExecutionPolicy RemoteSigned
+
 {% endhighlight %}
 
 
