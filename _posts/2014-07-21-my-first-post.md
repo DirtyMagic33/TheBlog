@@ -18,7 +18,7 @@ I will be creating two functions, one used to create and connect a session (Conn
 
 The connect script starts out by setting PowerShell’s execution policy to RemoteSigned. If it is set to anything other than RemoteSigned or Unrestricted you will encounter errors.
 
-```PowerShell
+```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
 
