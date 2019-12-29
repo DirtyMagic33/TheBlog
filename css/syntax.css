@@ -32,10 +32,10 @@
 .highlight .no { color: #008080 } /* Name.Constant */
 .highlight .ni { color: #800080 } /* Name.Entity */
 .highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #ccc000; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;  } /* Name.Function */
+.highlight .nf { color: #ccc000; font-size: 10pt; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;  } /* Name.Function */
 .highlight .nn { color: #555555 } /* Name.Namespace */
 .highlight .nt { color: #ffffff } /* Name.Tag */
-.highlight .nv { color: #2fb805; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; } /* Name.Variable */
+.highlight .nv { color: #2fb805; font-size: 12pt; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; } /* Name.Variable */
 .highlight .ow { font-weight: bold } /* Operator.Word */
 .highlight .w { color: #bbbbbb } /* Text.Whitespace */
 .highlight .mf { color: #009999 } /* Literal.Number.Float */
