@@ -2,7 +2,7 @@
 layout: post
 title: "Connect to Office 365 Function"
 date: 2014-07-21 12:00:00
-categories: jekyll
+categories: Office 365
 featured_image: /images/391660.jpg
 ---
 
