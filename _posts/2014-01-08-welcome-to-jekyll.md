@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Strange Case of Dr Jek and Mr Hyde"
-date: 2014-01-10 12:00:00
+date: 2014-01-08 04:00:00 -0800
 categories: jekyll
 featured_image: /images/cover.jpg
 ---
