@@ -3,7 +3,7 @@ layout: post
 title: "Connect to Office 365 Function"
 date: 2014-07-21 12:00:00
 categories: jekyll
-featured_image: /images/cover.jpg
+featured_image: /images/391660.jpg
 ---
 
 Using PowerShell to manage Office 365 is very um, for lack of a better word, powerful. And although more functionality has been to the UI there are tasks that still need be done using PowerShell. Also if you need to do any sort of bulk administration tasks PowerShell is where it’s at.
