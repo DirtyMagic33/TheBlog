@@ -26,6 +26,7 @@ Foreach ($item in $collection)
 $ArrayList
 {% endhighlight %}
 
+Another sample set of code.
 
 {% highlight powershell %}
 configuration WebServerBaseline
