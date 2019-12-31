@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Testomg Syntax Highlight"
+title: "Testing Syntax Highlights"
 date: 2019-12-30 12:00:00
 categories: Test
 featured_image: /images/bride.jpg
