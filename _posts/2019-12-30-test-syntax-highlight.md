@@ -25,3 +25,52 @@ Foreach ($item in $collection)
 
 $ArrayList
 {% endhighlight %}
+
+
+{% highlight powershell %}
+configuration WebServerBaseline
+{
+    Import-DscResource -ModuleName PSDesiredStateConfiguration
+    Import-DscResource -ModuleName xWebAdministration
+
+    node localhost
+    {
+        WindowsFeature WebServer
+        {
+           Ensure = "Present"
+           Name   = "web-server"
+        }
+
+        WindowsFeature WebMgmtTools
+        {
+           Ensure = "Present"
+           Name   = "Web-Mgmt-Tools"
+        }
+
+        WindowsFeature NETNonHTTPActiv
+        {
+           Ensure = "Present"
+           Name   = "NET-Non-HTTP-Activ"
+        }
+
+        File Globomantics
+        {
+            Ensure          = "Present"
+            DestinationPath = "$env:systemdrive"+"\Globomantics"
+            Type            = "Directory"
+        }
+
+        xWebAppPool GlobomanticsAppPool
+        {
+            Name = 'Globomantics'
+            Ensure = 'Present'
+            ManagedRuntimeVersion = 'v4.0'
+            IdleTimeoutAction = 'Terminate'
+            cpuAction = 'ThrottleUnderLoad'
+            autoStart = $true
+            restartRequestsLimit = 0
+            enable32bitApponWin64 = $false
+        }
+    }
+}
+{% endhighlight %}
