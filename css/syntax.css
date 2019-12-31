@@ -40,7 +40,7 @@
 
 .highlight .nn { color: #f4bf75; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
 
-.highlight .nc { color: #f4bf75; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
+.highlight .nc, .highlight .nf { color: #f4bf75; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
 
 .highlight .no { color: #f4bf75; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
 
