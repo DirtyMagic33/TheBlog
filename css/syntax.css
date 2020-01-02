@@ -6,6 +6,8 @@
 
 .highlight .err { color: #151515; background-color: #ac4142; font-size: 10pt; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
 
+.highlight .bp { color: #90a959; font-size: 10pt; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
+
 .highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs { color: #505050; font-size: 10pt; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
 
 .highlight .cp { color: #f4bf75; font-size: 10pt; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
@@ -39,6 +41,8 @@
 .highlight .se { color: #8f5536; font-size: 10pt; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
 
 .highlight .nn { color: #f4bf75; font-size: 10pt; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
+
+.highlight .nf { color: #e4ddd3; font-size: 10pt; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
 
 .highlight .nc, .highlight .nf { color: #f4bf75; font-size: 10pt; font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; }
 
