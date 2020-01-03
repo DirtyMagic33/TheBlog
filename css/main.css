@@ -19,10 +19,10 @@ body {
 
 body {
   overflow-x: hidden;
-  font-family: 'Bitter', serif;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 28px;
-  color: #222;
+  color: #666666;
   font-weight: 400;
   white-space: nowrap;
 }
