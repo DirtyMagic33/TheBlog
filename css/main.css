@@ -330,12 +330,12 @@ article li {
 }
 
 article a {
-  color: #CE2323;
+  color: #555555;
   text-decoration: none;
 }
 
 article a:hover {
-  color: #555555
+  color: #CE2323
 }
 
 /* Posts List */
