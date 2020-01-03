@@ -23,13 +23,8 @@ body {
 
 /* Type */
 
-h1 {
-  font-family: 'Open Sans', sans-serif;
-}
 
 h2 {
-  margin-top: .8em;
-	margin-bottom: .4em;
 	font-family: "Roboto Slab", serif;
 	font-weight: lighter;
 	color: #333333;
@@ -37,6 +32,7 @@ h2 {
 }
 
 h1 {
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.3;
   font-weight: 600;
   font-size: 60px;
@@ -44,7 +40,6 @@ h1 {
 }
 
 h2 {
-  font-weight: 600;
   font-size: 24px;
   margin-bottom: 18px;
   margin-top: 36px;
