@@ -347,6 +347,7 @@ ul.posts li {
 
 ul.posts .meta {
   display: block;
+  margin-top: 5px;
   margin-bottom: 16px;
   color: #8d8d8d;
 }
