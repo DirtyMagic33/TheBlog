@@ -6,8 +6,6 @@ categories: Test
 featured_image: /images/bride.jpg
 ---
 
-# Testing Code Highlighting with CSS
-
 Sample PowerShell code to see how it is being displayed.
 
 {% highlight powershell %}
