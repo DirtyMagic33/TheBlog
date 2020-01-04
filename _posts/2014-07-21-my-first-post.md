@@ -22,7 +22,6 @@ The connect script starts out by setting PowerShell’s execution policy to Remo
  Set-ExecutionPolicy RemoteSigned
 {% endhighlight %}
 
-
 The next step in the script is to create a variable to store your Office 365 credentials. When the function is run a dialog box will appear and you will need to enter your Office 365 username and password.
 
 {% highlight powershell %}
@@ -31,7 +30,7 @@ The next step in the script is to create a variable to store your Office 365 cre
 
 This creates a remote PowerShell session to Exchange Online. Note the use of the credential object we created in the first step.
 
-Code goes here.
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
 
 This next line imports the newly created session. Here is where it got a little tricky for me. Normally when connecting to Office 365 not using a script you would just use Import-PSSession $Session. But when doing that inside of a script, you still get connected, but when you try to run an Exchange command like Get-Mailbox you will get an error stating that this is not recognized as a cmdlet. Looking back at the output of the script I noticed this bit of info.
 
@@ -39,19 +38,34 @@ WARNING: Proxy creation has been skipped for the following command: ‘TabExpans
 
 The AllowClobber parameter imports the specified commands even if they have the same name as existing commands. I’m always reminded of The Thing when I see that parameter.
 
-code goes here.
+{% highlight powershell %}
+Import-Module (Import-PSSession $Session -Allowclobber) –Global
+{% endhighlight %}
 
 This last command loads the Office 365 cmdlets such as Get-MsolDomain and New-MsolUser.
 
-Code goes here.
+{% highlight powershell %}
+Connect-MsolService -Credential $Cred
+{% endhighlight %}
 
 You can view the cmdlets in this module using the following command.
 
-Code goes here.
+{% highlight powershell %}
+Get-Command –Module Msonline
+{% endhighlight %}
 
 The entire function looks like this.
 
-Code goes here.
+{% highlight powershell %}
+function Connect-O365 {
+ 
+    Set-ExecutionPolicy RemoteSigned
+    $Cred = Get-Credential
+    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic -AllowRedirection
+    Import-Module (Import-PSSession $Session -Allowclobber) -Global
+    Connect-MsolService -Credential $Cred
+} 
+{% endhighlight %}
 
 ## Closing Your PowerShell Session
 
@@ -59,11 +73,18 @@ You may be wondering why I even bothered to create this function. You could just
 
 Closing the session is just one line. We pipe the Get-PSSession cmdlets to Where-Object looking for sessions that contain “outlook.com”. The results are then piped to the Remove-Session cmdlet.
 
-Code goes here.
+{% highlight powershell %}
+Get-PSSession | Where-Object {$_.computername -like “*.outlook.com”} | Remove-PSSession
+{% endhighlight %}
 
 The entire disconnect function looks like this.
 
-Code goes here.
+{% highlight powershell %}
+function Disconnect-O365 {
+ 
+    Get-PSSession | Where-Object {$_.computername -like “*.outlook.com”} | Remove-PSSession
+}
+{% endhighlight %}
 
 ## Using the Functions
 
