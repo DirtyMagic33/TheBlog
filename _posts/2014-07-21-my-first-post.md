@@ -61,7 +61,8 @@ function Connect-O365 {
  
     Set-ExecutionPolicy RemoteSigned
     $Cred = Get-Credential
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic -AllowRedirection
+    $Session = New-PSSession -ConfigurationName Microsoft.Exchange `
+       -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic -AllowRedirection
     Import-Module (Import-PSSession $Session -Allowclobber) -Global
     Connect-MsolService -Credential $Cred
 } 
