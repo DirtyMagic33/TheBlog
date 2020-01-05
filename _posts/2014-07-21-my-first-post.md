@@ -83,7 +83,7 @@ The entire disconnect function looks like this.
 {% highlight powershell %}
 function Disconnect-O365 {
  
-    Get-PSSession | Where-Object {$_.computername -like “*.outlook.com”} | Remove-PSSession
+    Get-PSSession | Where-Object {$_.computername -like '*.outlook.com'} | Remove-PSSession
 }
 {% endhighlight %}
 
